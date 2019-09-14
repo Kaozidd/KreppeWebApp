@@ -4,8 +4,12 @@ const app = express()
 
 const PORT = process.env.PORT || 3000
 
-app.get('/', (req, res) => {
-	console.log(`App running in PORT: ${PORT}...`)
+app.get('/', function(req, res) {
+	fs.readFile(`${__dirname}/src/views/home.html`, 'utf-8', function(error, content) {
+		res.send(content)
+	})
 })
 
-
+app.listen(PORT, function() {
+	console.log(`App running in PORT: ${PORT}...`)
+})

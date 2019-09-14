@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo test",
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -28,5 +28,11 @@
   "bugs": {
     "url": "https://github.com/Kaozidd/KreppeWebApp/issues"
   },
-  "homepage": "https://github.com/Kaozidd/KreppeWebApp#readme"
+  "homepage": "https://github.com/Kaozidd/KreppeWebApp#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  }
 }
