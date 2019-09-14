@@ -1,0 +1,32 @@
+{
+  "name": "kreppe-web-app",
+  "version": "1.0.0",
+  "description": "This is a mobile-first web app for Kreppe CDMX",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kaozidd/KreppeWebApp.git"
+  },
+  "keywords": [
+    "kreppe",
+    "kreppecdmx",
+    "farouk",
+    "farouksystems",
+    "farouksystemscdmx",
+    "beauty",
+    "store",
+    "hair",
+    "salon",
+    "boutique"
+  ],
+  "author": "kaozidd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kaozidd/KreppeWebApp/issues"
+  },
+  "homepage": "https://github.com/Kaozidd/KreppeWebApp#readme"
+}
