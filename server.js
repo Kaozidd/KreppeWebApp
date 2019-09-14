@@ -7,6 +7,13 @@ const ejs = require('ejs')
 const pageRouter = require('./src/routers/pageRouter.js')
 const apiRouter = require('./src/routers/apiRouter.js')
 
+// Set DataBase Connection
+const knexFile = require('./knexfile')
+const connectToDataBase = require('./src/database/dbConnect')
+const appConnectionWithDatabase = connectToDataBase(knexFile.development)
+
+app.locals.db = appConnectionWithDatabase
+
 // Set view engine
 app.engine('ejs', ejs.renderFile)
 app.set('view engine', 'ejs')
@@ -21,7 +28,7 @@ app.use('/api', apiRouter)
 
 // Set 404 view
 app.use((req, res) => {
-	res.send('<h1>404 - Page Not Found!</h1>')
+	res.render('404.ejs')
 })
 
 // Set PORT
